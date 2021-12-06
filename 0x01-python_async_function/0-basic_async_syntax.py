@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-a python asynchronous module that waits a random delay b/n 0 & max-delay 
+a python asynchronous module that waits a random delay b/n 0 & max-delay
 """
 import asyncio
 import random
