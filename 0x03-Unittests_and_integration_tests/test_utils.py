@@ -44,6 +44,7 @@ class TestAccessNestedMap(unittest.TestCase):
         with self.assertRaises(Exception) as err:
             access_nested_map(nst_map, key)
 
+
 class TestGetJson(unittest.TestCase):
     """a class to test the get json method"""
     @parameterized.expand([
@@ -62,6 +63,7 @@ class TestGetJson(unittest.TestCase):
         with patch('requests.get') as mk_rqst:
             mk_rqst.return_value.json.return_value = payload
             self.assertEqual(get_json(url), payload)
+
 
 class TestMemoize(unittest.TestCase):
     """a classs to test memoize function"""
@@ -87,4 +89,3 @@ class TestMemoize(unittest.TestCase):
             tst.a_property()
             tst.a_property()
             mk.assert_called_once()
-
